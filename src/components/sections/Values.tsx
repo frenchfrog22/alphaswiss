@@ -1,8 +1,6 @@
-"use client";
-
 import { PieChart, TrendingUp, BarChart3, Award, Users, Globe } from "lucide-react";
 import { motion } from "framer-motion";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 const offerings = [
     {
@@ -44,12 +42,12 @@ export function Values() {
             </div>
 
             <div className="container px-4 md:px-6 mx-auto relative z-10">
-                <div className="max-w-3xl mx-auto mb-20 text-center">
+                <div className="max-w-2xl mx-auto mb-16 text-center">
                     <motion.h2
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
-                        className="text-4xl md:text-5xl font-sans font-bold text-black mb-6"
+                        className="text-2xl md:text-3xl font-sans font-bold text-black mb-4"
                     >
                         The steady pillars to generational freedom
                     </motion.h2>
@@ -58,13 +56,13 @@ export function Values() {
                         whileInView={{ opacity: 1, y: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: 0.1 }}
-                        className="text-xl text-gray-600 leading-relaxed"
+                        className="text-base text-gray-600 leading-relaxed"
                     >
                         Our offering is built entirely around your needs and aspirations. We create personalized strategies that reflect your goals and values, provide access to exceptional investment opportunities and maintain full visibility at all times.
                     </motion.p>
                 </div>
 
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 auto-rows-[minmax(300px,auto)]">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(250px,auto)]">
                     {offerings.map((offering, index) => (
                         <motion.div
                             key={offering.title}
@@ -73,7 +71,7 @@ export function Values() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.15, duration: 0.6 }}
                             className={cn(
-                                "group relative overflow-hidden rounded-3xl p-8 transition-all duration-500 hover:shadow-xl border border-gray-100",
+                                "group relative overflow-hidden rounded-2xl p-6 transition-all duration-500 hover:shadow-xl border border-gray-100",
                                 "bg-gradient-to-br",
                                 offering.gradient,
                                 offering.className

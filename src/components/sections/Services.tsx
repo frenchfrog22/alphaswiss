@@ -1,10 +1,8 @@
-"use client";
-
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Button } from "@/components/ui/button";
+import { Button } from "../ui/button";
 import { ArrowRight, Receipt, Shield, Network, CheckCircle, ChevronDown } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 const principles = [
     {
@@ -37,22 +35,22 @@ export function Services() {
     const [activeService, setActiveService] = useState(principles[0].id);
 
     return (
-        <section id="independence" className="py-32 bg-white">
+        <section id="independence" className="py-24 bg-white">
             <div className="container px-4 md:px-6 mx-auto">
-                <div className="max-w-4xl mx-auto">
+                <div className="max-w-3xl mx-auto">
 
                     {/* Accordion */}
-                    <div className="w-full space-y-8">
+                    <div className="w-full space-y-6">
                         <div>
-                            <h2 className="text-4xl font-sans font-bold text-black mb-4">
+                            <h2 className="text-2xl font-sans font-bold text-black mb-3">
                                 Expertise at Your Service
                             </h2>
-                            <p className="text-gray-600 text-lg">
+                            <p className="text-gray-600 text-base">
                                 We offer a full spectrum of financial services designed to meet the complex needs of private clients and families.
                             </p>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             {principles.map((principle) => (
                                 <div
                                     key={principle.id}
@@ -65,7 +63,7 @@ export function Services() {
                                         onClick={() => setActiveService(principle.id)}
                                         className="w-full flex items-center justify-between py-4 text-left group"
                                     >
-                                        <div className="flex items-center gap-4">
+                                        <div className="flex items-center gap-3">
                                             <div className={cn(
                                                 "p-2 rounded-lg transition-colors duration-300",
                                                 activeService === principle.id ? "bg-brand-primary text-white" : "bg-gray-100 text-gray-500 group-hover:bg-gray-200"
@@ -73,7 +71,7 @@ export function Services() {
                                                 <principle.icon className="w-5 h-5" />
                                             </div>
                                             <h3 className={cn(
-                                                "text-xl font-bold transition-colors duration-300",
+                                                "text-lg font-bold transition-colors duration-300",
                                                 activeService === principle.id ? "text-black" : "text-gray-500"
                                             )}>
                                                 {principle.title}
@@ -94,10 +92,10 @@ export function Services() {
                                                 transition={{ duration: 0.3 }}
                                                 className="overflow-hidden"
                                             >
-                                                <p className="text-gray-600 leading-relaxed pt-2 pb-4 pl-[60px]">
+                                                <p className="text-sm text-gray-600 leading-relaxed pt-2 pb-3 pl-[60px]">
                                                     {principle.description}
                                                 </p>
-                                                <div className="pl-[60px] pb-2">
+                                                <div className="pl-[60px] pb-1">
                                                     <Button variant="link" className="p-0 h-auto text-brand-secondary hover:text-brand-tertiary">
                                                         Learn more <ArrowRight className="ml-2 w-4 h-4" />
                                                     </Button>

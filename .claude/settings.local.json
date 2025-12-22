@@ -12,7 +12,9 @@
       "Bash(git add:*)",
       "Bash(git commit:*)",
       "Bash(npm install:*)",
-      "Bash(npm run build:*)"
+      "Bash(npm run build:*)",
+      "Bash(SKIP_PREFLIGHT_CHECK=true npm run build)",
+      "Bash(PORT=3001 npm start)"
     ],
     "deny": [],
     "ask": []

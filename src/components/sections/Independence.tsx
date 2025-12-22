@@ -1,9 +1,7 @@
-"use client";
-
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Receipt, Shield, Network, CheckCircle } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { cn } from "../../lib/utils";
 
 const principles = [
     {
@@ -36,22 +34,22 @@ export function Independence() {
     const [activePrinciple, setActivePrinciple] = useState(principles[0].id);
 
     return (
-        <section id="independence" className="py-32 bg-white">
+        <section id="independence" className="py-24 bg-white">
             <div className="container px-4 md:px-6 mx-auto">
-                <div className="flex flex-col md:flex-row gap-12 lg:gap-24 items-start">
+                <div className="flex flex-col md:flex-row gap-8 lg:gap-16 items-start">
 
                     {/* Left Column: Accordion */}
-                    <div className="w-full md:w-1/2 space-y-8">
+                    <div className="w-full md:w-1/2 space-y-6">
                         <div>
-                            <h2 className="text-4xl font-sans font-bold text-black mb-4">
+                            <h2 className="text-2xl font-sans font-bold text-black mb-3">
                                 Independence is our primary value
                             </h2>
-                            <p className="text-gray-600 text-lg">
+                            <p className="text-gray-600 text-base">
                                 We are not tied to any institution. Rather, we manage your best interests in close partnership with your custodian banks to deliver unbiased advice and personalized wealth solutions.
                             </p>
                         </div>
 
-                        <div className="space-y-4">
+                        <div className="space-y-3">
                             {principles.map((principle) => (
                                 <div
                                     key={principle.id}
@@ -64,7 +62,7 @@ export function Independence() {
                                         onClick={() => setActivePrinciple(principle.id)}
                                         className="w-full flex items-center justify-between py-4 text-left group"
                                     >
-                                        <div className="flex items-center gap-4">
+                                        <div className="flex items-center gap-3">
                                             <div className={cn(
                                                 "p-2 rounded-lg transition-colors duration-300",
                                                 activePrinciple === principle.id ? "bg-brand-primary text-white" : "bg-gray-100 text-gray-500 group-hover:bg-gray-200"
@@ -72,7 +70,7 @@ export function Independence() {
                                                 <principle.icon className="w-5 h-5" />
                                             </div>
                                             <h3 className={cn(
-                                                "text-xl font-bold transition-colors duration-300",
+                                                "text-lg font-bold transition-colors duration-300",
                                                 activePrinciple === principle.id ? "text-black" : "text-gray-500"
                                             )}>
                                                 {principle.title}
@@ -87,18 +85,18 @@ export function Independence() {
                                             transition={{ duration: 0.3 }}
                                             className="overflow-hidden"
                                         >
-                                            <div className="pt-2 pb-4 pl-[60px] space-y-4">
-                                                <p className="text-gray-600 leading-relaxed">
+                                            <div className="pt-2 pb-3 pl-[60px] space-y-3">
+                                                <p className="text-sm text-gray-600 leading-relaxed">
                                                     {principle.description}
                                                 </p>
-                                                <p className="text-sm text-gray-500 italic">
+                                                <p className="text-xs text-gray-500 italic">
                                                     {principle.details}
                                                 </p>
                                                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                                                     {principle.features.map((feature, idx) => (
                                                         <div key={idx} className="flex items-center gap-2">
                                                             <CheckCircle className="w-4 h-4 text-green-600" />
-                                                            <span className="text-sm text-gray-600">{feature}</span>
+                                                            <span className="text-xs text-gray-600">{feature}</span>
                                                         </div>
                                                     ))}
                                                 </div>
@@ -111,20 +109,20 @@ export function Independence() {
                     </div>
 
                     {/* Right Column: Independence Visual */}
-                    <div className="w-full md:w-1/2 relative h-[600px] rounded-3xl overflow-hidden bg-gradient-to-br from-brand-primary to-brand-secondary hidden md:flex items-center justify-center">
+                    <div className="w-full md:w-1/2 relative h-[480px] rounded-3xl overflow-hidden bg-gradient-to-br from-brand-primary to-brand-secondary hidden md:flex items-center justify-center">
                         <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent" />
-                        <div className="text-center text-white z-10 px-8">
+                        <div className="text-center text-white z-10 px-6">
                             <motion.div
                                 initial={{ opacity: 0, scale: 0.8 }}
                                 animate={{ opacity: 1, scale: 1 }}
                                 transition={{ duration: 0.8, delay: 0.2 }}
-                                className="mb-8"
+                                className="mb-6"
                             >
-                                <div className="w-24 h-24 mx-auto bg-white/20 backdrop-blur rounded-full flex items-center justify-center mb-6">
-                                    <Shield className="w-12 h-12 text-white" />
+                                <div className="w-20 h-20 mx-auto bg-white/20 backdrop-blur rounded-full flex items-center justify-center mb-4">
+                                    <Shield className="w-10 h-10 text-white" />
                                 </div>
-                                <h3 className="text-3xl font-bold mb-4">True Independence</h3>
-                                <p className="text-white/90 text-lg leading-relaxed">
+                                <h3 className="text-2xl font-bold mb-3">True Independence</h3>
+                                <p className="text-white/90 text-base leading-relaxed">
                                     No conflicts. No hidden fees. No proprietary bias. Just pure, uncompromising dedication to your financial success.
                                 </p>
                             </motion.div>
@@ -133,10 +131,10 @@ export function Independence() {
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
                                 transition={{ duration: 0.6, delay: 0.8 }}
-                                className="bg-white/10 backdrop-blur rounded-xl p-6 border border-white/20"
+                                className="bg-white/10 backdrop-blur rounded-xl p-4 border border-white/20"
                             >
-                                <p className="text-sm text-white/80 mb-2">Our Commitment</p>
-                                <p className="text-white font-medium">
+                                <p className="text-xs text-white/80 mb-1">Our Commitment</p>
+                                <p className="text-sm text-white font-medium">
                                     "We intend to offer our clients the sophistication of a global bank with the personal touch of a boutique firm."
                                 </p>
                             </motion.div>
