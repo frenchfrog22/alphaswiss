@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export function Hero() {
     return (
         <section className="relative h-screen w-full overflow-hidden text-white flex items-center justify-center">
-            {/* Video Background Only */}
+            {/* Background - Video if available, fallback to gradient */}
             <div className="absolute inset-0 z-0">
                 <video
                     autoPlay
@@ -11,12 +11,16 @@ export function Hero() {
                     muted
                     playsInline
                     className="absolute inset-0 w-full h-full object-cover"
+                    onError={() => console.log('Video not found, using gradient background')}
                 >
                     <source src="/assets/background_video.mp4" type="video/mp4" />
                 </video>
 
+                {/* Fallback gradient background */}
+                <div className="absolute inset-0 bg-gradient-to-br from-[#1E202E] via-[#2A2D3F] to-[#22223A]"></div>
+
                 {/* Dark overlay for better text readability */}
-                <div className="absolute inset-0 bg-black/50" />
+                <div className="absolute inset-0 bg-black/30" />
             </div>
 
             <div className="container relative z-10 px-4 md:px-6 flex flex-col items-center text-center max-w-6xl mx-auto">
