@@ -30,7 +30,7 @@ export function Footer() {
                     <div className="md:col-span-2 md:col-start-8">
                         <h4 className="text-xs font-bold uppercase tracking-widest text-gray-500 mb-4">Sections</h4>
                         <ul className="space-y-3">
-                            {["Solutions", "Platform", "About Us", "Contact"].map((item) => (
+                            {["Solutions", "Platform", "Our Values", "Contact"].map((item) => (
                                 <li key={item}>
                                     <a href={`#${item.toLowerCase().replace(" ", "-")}`} className="text-gray-300 hover:text-white transition-colors flex items-center group">
                                         {item}
