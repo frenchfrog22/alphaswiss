@@ -15,7 +15,8 @@
       "Bash(npm run build:*)",
       "Bash(SKIP_PREFLIGHT_CHECK=true npm run build)",
       "Bash(PORT=3001 npm start)",
-      "Bash(git lfs track:*)"
+      "Bash(git lfs track:*)",
+      "Bash(npm start)"
     ],
     "deny": [],
     "ask": []

@@ -40,7 +40,7 @@ export function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center justify-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
-                    {["Solutions", "Platform", "About Us", "Contact"].map((item) => (
+                    {["Solutions", "Platform", "Our Values", "Contact"].map((item) => (
                         <a
                             key={item}
                             href={`#${item.toLowerCase().replace(" ", "-")}`}
