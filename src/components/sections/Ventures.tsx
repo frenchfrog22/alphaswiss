@@ -86,7 +86,7 @@ export function PrivateEquity() {
     };
 
     return (
-        <section id="private-equity" className="py-32 bg-gray-100">
+        <section id="ventures" className="py-32 bg-gray-100">
             <div className="max-w-7xl mx-auto px-4 md:px-6">
                 {/* Header */}
                 <div className="mb-8">

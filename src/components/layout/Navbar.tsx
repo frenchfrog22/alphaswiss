@@ -40,10 +40,15 @@ export function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center justify-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
-                    {["Services", "Ventures", "Platform", "The Team"].map((item) => (
+                    {[
+                        { label: "Services", href: "#services" },
+                        { label: "Ventures", href: "#ventures" },
+                        { label: "Platform", href: "#platform" },
+                        { label: "The Team", href: "#contact" }
+                    ].map((item) => (
                         <a
-                            key={item}
-                            href={`#${item.toLowerCase().replace(" ", "-")}`}
+                            key={item.label}
+                            href={item.href}
                             className={cn(
                                 "px-3 py-1.5 rounded-xl text-sm font-semibold transition-all duration-300 relative group",
                                 isScrolled
@@ -51,7 +56,7 @@ export function Navbar() {
                                     : "text-white/90 hover:text-white hover:bg-white/10"
                             )}
                         >
-                            <span className="relative z-10">{item}</span>
+                            <span className="relative z-10">{item.label}</span>
                             <div className={cn(
                                 "absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-all duration-300",
                                 isScrolled
@@ -103,14 +108,19 @@ export function Navbar() {
             {isOpen && (
                 <div className="md:hidden absolute top-full left-0 right-0 backdrop-blur-xl bg-[#1E202E]/95 border-t border-gray-200/20 shadow-2xl animate-in slide-in-from-top-5">
                     <div className="p-4 space-y-4">
-                        {["Services", "Ventures", "Platform", "The Team"].map((item) => (
+                        {[
+                            { label: "Services", href: "#services" },
+                            { label: "Ventures", href: "#ventures" },
+                            { label: "Platform", href: "#platform" },
+                            { label: "The Team", href: "#contact" }
+                        ].map((item) => (
                             <a
-                                key={item}
-                                href={`#${item.toLowerCase().replace(" ", "-")}`}
+                                key={item.label}
+                                href={item.href}
                                 className="block py-2 px-3 rounded-xl text-sm font-semibold text-white hover:text-white hover:bg-white/10 transition-all duration-300"
                                 onClick={() => setIsOpen(false)}
                             >
-                                {item}
+                                {item.label}
                             </a>
                         ))}
                         <div className="pt-3 border-t border-gray-200/30">

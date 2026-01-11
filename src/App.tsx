@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
 import { Navbar } from "./components/layout/Navbar";
 import { Hero } from "./components/sections/Hero";
-import { Solutions } from "./components/sections/Solutions";
+import { Solutions } from "./components/sections/Services";
 import { PrivateEquity } from "./components/sections/Ventures";
 import { Platform } from "./components/sections/Platform";
 import { Contact } from "./components/sections/Contact";
