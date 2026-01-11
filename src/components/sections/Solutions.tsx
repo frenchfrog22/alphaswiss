@@ -38,7 +38,7 @@ const facets = [
 
 export function Solutions() {
     return (
-        <section id="solutions" className="min-h-screen bg-white pt-32">
+        <section id="solutions" className="bg-white py-32">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-0">
@@ -113,7 +113,7 @@ export function Solutions() {
                 </div>
 
                 {/* How We Differ Section */}
-                <div className="mt-32 mb-32 flex flex-col lg:flex-row gap-16 items-center">
+                <div className="mt-32 flex flex-col lg:flex-row gap-16 items-center">
                     {/* Left Content */}
                     <div className="lg:w-1/2">
                         <motion.h2
