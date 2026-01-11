@@ -37,10 +37,10 @@
     --radius: 0.5rem;
 
     /* AlphaSwiss Four Facets Color Palette */
-    --facet-1: #C5CDD9; /* Light blue-gray */
-    --facet-2: #9AA6BA; /* Medium blue-gray */
-    --facet-3: #7B8AA4; /* Darker blue-gray */
-    --facet-4: #4A4F5E; /* Dark slate gray */
+    --facet-1: #3D4050; /* Darkest slate */
+    --facet-2: #6B7288; /* Medium-dark blue-gray */
+    --facet-3: #8B94AB; /* Medium blue-gray */
+    --facet-4: #B4BBCC; /* Lightest blue-gray */
   }
 
   .dark {
@@ -101,20 +101,4 @@
 
 .group:hover.hover\:rotate-y-180 {
   transform: rotateY(180deg);
-}
-
-/* Hide scrollbar for horizontal scroll */
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari and Opera */
-}
-
-/* Contact form focus styles */
-input:focus,
-textarea:focus {
-  --tw-ring-color: #9AA6BA;
 }

@@ -113,15 +113,15 @@ export function Solutions() {
                 </div>
 
                 {/* How We Differ Section */}
-                <div className="mt-32 mb-32 flex flex-col lg:flex-row gap-12 items-center">
+                <div className="mt-32 mb-32 flex flex-col lg:flex-row gap-16 items-center">
                     {/* Left Content */}
                     <div className="lg:w-1/2">
                         <motion.h2
                             initial={{ opacity: 0, y: 20 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            className="inline-block text-white text-sm font-medium mb-8 uppercase tracking-wide px-4 py-2 rounded-sm shadow-md"
-                            style={{ backgroundColor: "#7B8AA4" }}
+                            className="inline-block bg-slate-700 text-white text-sm font-medium mb-8 uppercase tracking-wide px-4 py-2 rounded-sm shadow-md"
+
                         >
                             How we differ
                         </motion.h2>

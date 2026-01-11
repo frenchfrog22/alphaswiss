@@ -3,8 +3,8 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import { Navbar } from "./components/layout/Navbar";
 import { Hero } from "./components/sections/Hero";
 import { Solutions } from "./components/sections/Solutions";
+import { PrivateEquity } from "./components/sections/PrivateEquity";
 import { Platform } from "./components/sections/Platform";
-import { Values } from "./components/sections/Values";
 import { Contact } from "./components/sections/Contact";
 import { Footer } from "./components/layout/Footer";
 import "./globals.css";
@@ -16,8 +16,8 @@ function App() {
                 <Navbar />
                 <Hero />
                 <Solutions />
+                <PrivateEquity />
                 <Platform />
-                <Values />
                 <Contact />
                 <Footer />
             </main>
