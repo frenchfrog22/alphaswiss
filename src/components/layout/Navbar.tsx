@@ -40,7 +40,7 @@ export function Navbar() {
 
                 {/* Desktop Menu */}
                 <div className="hidden md:flex items-center justify-center space-x-2 absolute left-1/2 transform -translate-x-1/2">
-                    {["Solutions", "Platform", "Our Values", "Contact"].map((item) => (
+                    {["Services", "Ventures", "Platform", "The Team"].map((item) => (
                         <a
                             key={item}
                             href={`#${item.toLowerCase().replace(" ", "-")}`}
@@ -103,7 +103,7 @@ export function Navbar() {
             {isOpen && (
                 <div className="md:hidden absolute top-full left-0 right-0 backdrop-blur-xl bg-[#1E202E]/95 border-t border-gray-200/20 shadow-2xl animate-in slide-in-from-top-5">
                     <div className="p-4 space-y-4">
-                        {["Solutions", "Platform", "About Us", "Contact"].map((item) => (
+                        {["Services", "Ventures", "Platform", "The Team"].map((item) => (
                             <a
                                 key={item}
                                 href={`#${item.toLowerCase().replace(" ", "-")}`}
