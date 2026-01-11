@@ -38,7 +38,7 @@ const facets = [
 
 export function Solutions() {
     return (
-        <section id="solutions" className="bg-white py-32">
+        <section id="services" className="bg-white py-32">
             <div className="max-w-7xl mx-auto">
                 {/* Header */}
                 <div className="mb-0">
