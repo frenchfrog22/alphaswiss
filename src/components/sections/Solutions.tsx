@@ -163,7 +163,7 @@ export function Solutions() {
                                 preload="metadata"
                                 poster="/assets/poster.png"
                             >
-                                <source src="/assets/Alphaswiss-10Y.mp4" type="video/mp4" />
+                                <source src="/assets/AlphaSwiss-10Y.mp4" type="video/mp4" />
                                 Your browser does not support the video tag.
                             </video>
                         </div>
